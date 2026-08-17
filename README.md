@@ -16,7 +16,7 @@ The data suggests device type does not play a significant role in determining us
 
 <img width="339" height="225" alt="image" src="https://github.com/user-attachments/assets/6a62e520-2809-44d9-8c7a-f103e94e0f8e" />
 
-Both histograms are skewed to the right meaning the majority of observations fall below the median. One conclusion that can be made is that the users in this dataset are driving significant distances in the span of just one month. When it comes to duration half of the users drove less than 1478mins or approximately 25 hours during that month span. The histograms also point to very extreme outliers raising questions of accuracy in the data and how it was collected.
+Both histograms are skewed to the right meaning the majority of observations fall below the median. One conclusion that can be made is that the users in this dataset are driving significant distances with the median value of 3495km in the span of just one month. When it comes to duration half of the users drove less than 1478mins or approximately 25 hours during that month span. The histograms also point to very extreme outliers raising questions of accuracy in the data and how it was collected.
 
 
 
