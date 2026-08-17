@@ -1,2 +1,22 @@
-# Waze_Portfolio_Project-
-Showcasing a full range of data analysis techniques to predict user churn from Waze customer data 
+# Waze Portfolio Project
+Showcasing a full range of data analysis techniques to predict user churn from Waze customer data.
+
+# Overview
+The ultimate goal of this project was to utilize data analytics tools in order to review what factors cause user churn on the Waze platform and whether potential user churn could be predicted. Many different machine modeling techniques were evaluated against each other to identify the best performing model in order to discover meaningful insights about the data. The champion model provided some understanding of what could potentially impact user churn but was shown to struggle in its predictive power. The accuracy score of 81.7% seems positive on the surface; however, the distribution of the outcome variable was imbalanced (64-36 split) indicating the model was slightly better than randomly assigning classification based on these percentages. The primary objective was to identify churned users and those most likely to churn making recall score a more important metric and the deciding factor when choosing a champion. The highest recall score was returned by a parameter tuned XGBoost model with a value of 13.3%. Even though the score was underwhelming, examining the models feature importances could guide further analysis in the right direction. Many of the features with the highest importance were engineered variables such as kilometers per hour, percentage of sessions in the last month, and kilometers per driving day. A significant portion of the most impactful factors fell in the same range with all variables involving navigational favorites appearing in that range. 
+# Business Understanding
+Waze currently sits as a top 3 navigational app alongside Google maps and Apple maps. One of the apps biggest advantages is boarder compatibility than its competitors. Users from Android as well as iPhone operating systems can engage with Waze allowing for interactions between the communities. The joint effort leads to more accurate road hazard reporting, traffic assessments, and route adjustments. This is the primary draw for most users to the platform and it being widely regarded as the best app for drivers and traffic monitoring. If users are churning from the app it could indicate flaws in the user experience or that there is a new competitor drawing customers away with additional functionality. Assessing churn data can highlight whether those scenarios are true threats and can prevent the company from losing market share if they are identified in time to make strategy adjustments. 
+# Data Understanding
+The original dataset provided by Waze contained 14999 observations and 13 features. Additional features were engineered to in effort to optimize data modeling. Features such as drives, sessions, activity days, device, and navigation to favorites data was provided along with churned classifications. These features created a baseline for the engineered features like kilometers per driving day, percentage of total session in the last month, and percentage of navigations to favorited locations. Initial data exploration showed there wasn't a meaningful difference in retention rates among user device types. The histogram below shows the proportions of churned between Android and iPhone uses was quite similar. 
+
+<img width="339" height="333" alt="image" src="https://github.com/user-attachments/assets/4bf5e234-f78e-43f3-b205-32002eea7400" />
+
+The data suggests device type does not play a significant role in determining user churn. After reviewing feature histograms, two variables appeared to suggest potential clues on the general makeup of the average user in the dataset. The total kilometers driven in the last month histogram and the total duration in minutes of drives in the last month histogram are listed below (median line in red). 
+
+<img width="333" height="225" alt="image" src="https://github.com/user-attachments/assets/a24fd2f8-0ce3-4672-97c8-cb0cf14325d9" />
+
+<img width="339" height="225" alt="image" src="https://github.com/user-attachments/assets/6a62e520-2809-44d9-8c7a-f103e94e0f8e" />
+
+Both histograms are skewed to the right meaning the majority of observations fall below the median. One conclusion that can be made is that the users in this dataset are driving significant distances in the span of just one month. When it comes to duration half of the users drove less than 1478mins or approximately 25 hours during that month span. The histograms also point to very extreme outliers raising questions of accuracy in the data and how it was collected.
+
+
+
